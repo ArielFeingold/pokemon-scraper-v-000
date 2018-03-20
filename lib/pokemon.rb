@@ -5,7 +5,7 @@ attr_accessor :name, :type, :db, :id, :hp
 
 @@all = []
 
-  def initialize(id: nil, name:, type:, db:, hp:)
+  def initialize(id: nil, name:, type:, db:)
     @name = name
     @type = type
     @db = db
