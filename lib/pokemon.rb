@@ -22,9 +22,9 @@ attr_accessor :name, :type, :db, :id
   end
 
   def self.find(num, db = @db)
-
     db.execute("SELECT * FROM pokemon WHERE id = ?", num).map {|row| self.new_from_db(row) }.first}
     binding.pry
   end
+end
 
 end
