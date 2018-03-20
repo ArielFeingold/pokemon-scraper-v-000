@@ -29,10 +29,10 @@ attr_accessor :name, :type, :db, :id, :hp
     self.new(id: num, name: pk[1], type: pk[2], db: db, hp: pk[3])
 
   end
-
-  def alter_hp(hit, @db)
-    db.execute ("UPDATE pokemon SET hp = #{hit}")
-  end
+  #
+  # def alter_hp(hit, @db)
+  #   db.execute ("UPDATE pokemon SET hp = #{hit}")
+  # end
 
 
 end
