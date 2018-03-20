@@ -23,7 +23,7 @@ attr_accessor :name, :type, :db, :id, :hp
   end
 
   def self.find(num, db)
-    db.execute("ALTER TABLE pokemon ADD COLUMN hp INTEGER default 60")
+    # db.execute("ALTER TABLE pokemon ADD COLUMN hp INTEGER default 60")
       pk = db.execute("SELECT * FROM pokemon WHERE id = ?", num).first
     binding.pry
     self.new(id: num, name: pk[1], type: pk[2], db: db, hp: pk[3])
