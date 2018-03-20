@@ -1,15 +1,16 @@
 require 'pry'
 class Pokemon
 
-attr_accessor :name, :type, :db, :id
+attr_accessor :name, :type, :db, :id, :hp
 
 @@all = []
 
-  def initialize(id: nil, name:, type:, db:)
+  def initialize(id: nil, name:, type:, db:, hp:)
     @name = name
     @type = type
     @db = db
     @id = id
+    @hp = hp
     @@all << self
   end
 
