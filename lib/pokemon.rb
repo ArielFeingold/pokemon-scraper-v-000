@@ -25,8 +25,6 @@ attr_accessor :name, :type, :db, :id, :hp
   def self.find(num, db)
     pk = db.execute("SELECT * FROM pokemon WHERE id = ?", num).first
     self.new(id: num, name: pk[1], type: pk[2], db: db, hp: 60)
-    # db.execute("UPDATE pokemon SET @hp = 60 WHERE @id = #{num}");
-    # binding.pry
   end
 
 
