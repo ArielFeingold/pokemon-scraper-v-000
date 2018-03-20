@@ -26,7 +26,7 @@ attr_accessor :name, :type, :db, :id, :hp
     pk = db.execute("SELECT * FROM pokemon WHERE id = ?", num).first
     db.execute("ALTER TABLE pokemon ADD COLUMN hp INTEGER default 60")
     binding.pry
-    self.new(id: num, name: pk[1], type: pk[2], db: db)
+    self.new(id: num, name: pk[1], type: pk[2], db: db, hp: pk[3])
 
   end
 
